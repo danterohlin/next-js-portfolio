@@ -4,7 +4,7 @@ import CoverImage from "../components/cover-image";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function HeroPost({
+export default function HeroGame({
 	title,
 	coverImage,
 	date,
@@ -21,12 +21,16 @@ export default function HeroPost({
 					title={title}
 					url={coverImage}
 				/>
+				{/* <Image src="/quiz1.png" width="300" height="550" alt="andreas-spel" />
+				<Image src="/quiz2.png" width="300" height="550" alt="andreas-spel" />
+				<Image src="/quiz3.png" width="300" height="550" alt="andreas-spel" />
+				<Image src="/quiz4.png" width="300" height="550" alt="andreas-spel" /> */}
 			</div>
 			<div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
 				<div>
 					<h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-						<Link as={`/posts/${slug}`} href="/posts/[slug]">
-							<a className="hover:underline">{title}</a>
+						<Link as={`/games/${slug}`} href="/games/[slug]">
+							<a className="hover:underline">Hyper Pong v1.5</a>
 						</Link>
 					</h3>
 					<div className="mb-4 md:mb-0 text-lg">

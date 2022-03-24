@@ -3,7 +3,7 @@ import Date from "./date";
 import CoverImage from "./cover-image";
 import Link from "next/link";
 import { imageBuilder } from "../lib/sanity";
-export default function PostPreview({
+export default function GamePreview({
 	title,
 	coverImage,
 	date,
@@ -11,7 +11,6 @@ export default function PostPreview({
 	author,
 	slug,
 }) {
-	console.log(author);
 	return (
 		<div>
 			<div className="mb-5">
