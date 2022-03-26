@@ -8,3 +8,10 @@ article a {
 /* purgecss end ignore */
 @tailwind utilities;
 
+/* :root {
+    --social-color: rgb(97, 97, 97);
+}
+
+[data-theme='dark'] {
+    --social-color: rgb(255, 255, 255);
+} */

@@ -5,7 +5,7 @@ module.exports = {
 	],
 	darkMode: "class",
 	theme: {
-		typography: (theme) => ({}),
+		typography: (theme) => ({ dark: "dark" }),
 		extend: {
 			colors: {
 				"accent-1": "#FAFAFA",

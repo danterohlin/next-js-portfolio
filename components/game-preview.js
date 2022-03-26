@@ -12,7 +12,7 @@ export default function GamePreview({
 	slug,
 }) {
 	return (
-		<div>
+		<div className="sm:mx-2 mx-auto">
 			<div className="mb-5">
 				<CoverImage
 					slug={slug}
@@ -26,11 +26,11 @@ export default function GamePreview({
 					<a className="hover:underline">{title}</a>
 				</Link>
 			</h3>
-			<div className="text-lg mb-4">
+			{/* <div className="text-lg mb-4">
 				<Date dateString={date} />
-			</div>
+			</div> */}
 			<p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-			<Avatar name={author?.name} picture={author?.picture} />
+			{/* <Avatar name={author?.name} picture={author?.picture} /> */}
 		</div>
 	);
 }

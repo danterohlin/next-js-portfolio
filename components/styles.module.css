@@ -1,3 +1,16 @@
+/* .card_zoom {
+  @apply relative h-96 overflow-hidden rounded-2xl;
+}
+
+.card_zoom_image {
+  @apply absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover;
+}
+
+.card_zoom:hover .card_zoom_image {
+  @apply scale-110;
+} */
+
+
 .markdown {
   @apply text-lg leading-relaxed;
 }
@@ -67,7 +80,7 @@
 .action {
   position: relative;
   border-radius: 50%;
-  border: 2px solid var(--fg-color-6);
+  border: 2px solid;
   transition: all 300ms ease-out;
   width: 3.5em;
   height: 3.5em;
@@ -91,7 +104,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,7 +113,6 @@
 .actionBg svg {
   width: 50%;
   height: 50%;
-  fill: var(--fg-color-6);
 }
 
 .actionBgPane {
@@ -123,7 +134,7 @@
 
 .action:hover svg {
   transition: fill 100ms ease-out;
-  fill: var(--bg-color);
+  fill: rgb(255, 255, 255);
 }
 
 :global(.dark-mode) .action:hover svg {
@@ -186,7 +197,7 @@
 
 @media only screen and (min-width: 1700px) {
   .pageSocial {
-    right: 100px;
+    right: 180px;
   }
 }
 

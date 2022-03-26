@@ -6,8 +6,8 @@ export default function Footer() {
 		<footer className="bg-gray-200 dark:bg-gray-800">
 			<Container>
 				<div className="py-28 flex flex-col lg:flex-row items-center">
-					<h3 className="text-xl lg:text-2xl  font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-						Copyright © Dante Rohlin
+					<h3 className="text-xl lg:text-xl  font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
+						@ Dante Rohlin
 					</h3>
 					<div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
 						<a

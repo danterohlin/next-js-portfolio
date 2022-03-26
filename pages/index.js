@@ -7,14 +7,13 @@ import { getAllPostsForHome } from "../lib/api";
 import { getAllGamesForHome } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
+import Intro from "../components/intro";
 
 export default function Index({ allGames, allPosts, preview }) {
 	const heroPost = allPosts[0];
 	const morePosts = allPosts.slice(1);
 	const heroGame = allGames[0];
 	const moreGames = allGames.slice(1);
-
-	console.log(allGames);
 
 	return (
 		<>
@@ -23,7 +22,8 @@ export default function Index({ allGames, allPosts, preview }) {
 					<title>Next.js Blog Example with {CMS_NAME}</title>
 				</Head>
 				<Container>
-					{GameHero && (
+					<Intro games={allGames} />
+					{/* {GameHero && (
 						<GameHero
 							title={heroGame.title}
 							coverImage={heroGame.coverImage}
@@ -32,7 +32,7 @@ export default function Index({ allGames, allPosts, preview }) {
 							slug={heroGame.slug}
 							excerpt={heroGame.excerpt}
 						/>
-					)}
+					)} */}
 					{moreGames.length > 0 && <MoreProjects games={moreGames} />}
 				</Container>
 			</Layout>

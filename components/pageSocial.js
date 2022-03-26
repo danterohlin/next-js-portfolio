@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 const socialLinks = [
 	{
 		name: "twitter",
-		href: `https://twitter.com/Andreas Jonasson`,
+		href: `https://twitter.com/AndreasJonasson`,
 		title: `Twitter @Andreas Jonasson`,
 		icon: (
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -17,7 +17,7 @@ const socialLinks = [
 
 	{
 		name: "github",
-		href: `https://github.com/Andreas Jonasson`,
+		href: `https://github.com/officialskum`,
 		title: `GitHub @Andreas Jonasson`,
 		icon: (
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -28,7 +28,7 @@ const socialLinks = [
 
 	{
 		name: "linkedin",
-		href: `https://www.linkedin.com/in/Andreas Jonasson`,
+		href: `https://www.linkedin.com/in/AndreasJonasson`,
 		title: `LinkedIn @Andreas Jonasson`,
 		icon: (
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -41,10 +41,13 @@ const socialLinks = [
 export default function PageSocial() {
 	return (
 		<div className="container mx-auto px-5 ">
-			<div className={styles.pageSocial + " fixed  top-1/2"}>
+			<div className={styles.pageSocial + " fixed top-1/2 -translate-y-1/2"}>
 				{socialLinks.map((action) => (
 					<a
-						className={cs(styles.action, styles[action.name])}
+						className={
+							cs(styles.action, styles[action.name]) +
+							" fill-gray-600 dark:fill-gray-200"
+						}
 						href={action.href}
 						key={action.name}
 						title={action.title}

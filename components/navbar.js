@@ -1,7 +1,9 @@
 import Link from "next/link";
 import ToggleTheme from "./toggleTheme";
+import { useRouter } from "next/router";
 
 export default function navbar() {
+	const router = useRouter();
 	return (
 		<>
 			<navbar className="fixed w-full flex items-center justify-center">
@@ -19,7 +21,14 @@ export default function navbar() {
 					</h4> */}
 						<h4 className="text-center md:text-left text-lg md:pl-8">
 							<Link href="/about">
-								<a className="hover:underline">About me</a>
+								<a
+									className={`hover:underline + ${
+										router.pathname == "/about" ? "underline" : ""
+									}
+									`}
+								>
+									About me
+								</a>
 							</Link>
 						</h4>
 						<ToggleTheme />
