@@ -46,7 +46,7 @@ export default function PageSocial() {
 					<a
 						className={
 							cs(styles.action, styles[action.name]) +
-							" fill-gray-600 dark:fill-gray-200"
+							" fill-gray-800 dark:fill-gray-200"
 						}
 						href={action.href}
 						key={action.name}

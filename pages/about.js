@@ -4,7 +4,11 @@ import Image from "next/image";
 
 export default function about({ authors }) {
 	console.log(authors[0]);
-	return <Container>About Andreas Nördsson</Container>;
+	return (
+		<div className="p-2 xs:p-0 pt-10">
+			<Container>I'm just a noob</Container>
+		</div>
+	);
 }
 
 export async function getStaticProps({}) {

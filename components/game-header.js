@@ -1,10 +1,9 @@
 import Avatar from "./avatar";
 import Date from "./date";
 import GameTitle from "./game-title";
-import { imageBuilder } from "../lib/sanity";
 export default function PostHeader({ title, link, date, author }) {
 	return (
-		<>
+		<div className="p-2 xs:p-0">
 			<GameTitle link={link}>{title}</GameTitle>
 			<div className="hidden md:block md:mb-12">
 				<Avatar name={author?.name} picture={author?.picture} />
@@ -17,6 +16,6 @@ export default function PostHeader({ title, link, date, author }) {
 					<Date dateString={date} />
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

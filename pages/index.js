@@ -20,6 +20,10 @@ export default function Index({ allGames, allPosts, preview }) {
 			<Layout preview={preview}>
 				<Head>
 					<title>Next.js Blog Example with {CMS_NAME}</title>
+					<style>
+						@import
+						url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
+					</style>
 				</Head>
 				<Container>
 					<Intro games={allGames} />

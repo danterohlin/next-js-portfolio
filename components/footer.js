@@ -16,7 +16,11 @@ export default function Footer() {
 						>
 							Github
 						</a>
-						<a href="/contact" className="mx-3 font-bold hover:underline">
+						<a
+							href="/contact"
+							target="_blank"
+							className="mx-3 font-bold hover:underline"
+						>
 							Contact me
 						</a>
 					</div>
