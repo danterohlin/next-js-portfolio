@@ -21,7 +21,7 @@ export default function CoverImage({ title, url, imageObject, slug }) {
 	return (
 		<div
 			className={
-				"-sm:mx-5 md:mx-0 opacity-90 hover:opacity-100 hover:animate-pulse " +
+				"-sm:mx-5 md:mx-0 opacity-90 hover:opacity-100 hover:animate-wiggle " +
 				styles.card_zoom
 			}
 		>

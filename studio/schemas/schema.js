@@ -11,6 +11,8 @@ import post from "./post";
 import author from "./author";
 import comment from "./comment";
 import game from "./game";
+import message from "./message";
+import poster from "./poster";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +31,7 @@ export default createSchema({
 		// { type: 'typename' } in other document schemas
 		blockContent,
 		comment,
+		message,
+		poster,
 	]),
 });

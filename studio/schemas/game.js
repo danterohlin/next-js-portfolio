@@ -12,6 +12,11 @@ export default {
 			type: "string",
 		},
 		{
+			name: "link",
+			title: "Link",
+			type: "string",
+		},
+		{
 			name: "slug",
 			title: "Slug",
 			type: "slug",
@@ -22,7 +27,7 @@ export default {
 		},
 		{
 			name: "author",
-			title: "Author",
+			title: "Developer",
 			type: "reference",
 			to: { type: "author" },
 		},

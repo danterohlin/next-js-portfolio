@@ -11,6 +11,7 @@ export default function HeroGame({
 	excerpt,
 	author,
 	slug,
+	link,
 }) {
 	return (
 		<section>
@@ -30,7 +31,9 @@ export default function HeroGame({
 				<div>
 					<h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
 						<Link as={`/games/${slug}`} href="/games/[slug]">
-							<a className="hover:underline">Hyper Pong v1.5</a>
+							<a className="hover:underline" href={link}>
+								Hyper Pong v1.5
+							</a>
 						</Link>
 					</h3>
 					<div className="mb-4 md:mb-0 text-lg">

@@ -3,11 +3,11 @@ import { EXAMPLE_PATH } from "../lib/constants";
 
 export default function Footer() {
 	return (
-		<footer className="bg-gray-200 dark:bg-gray-800">
+		<footer className="bg-gray-100 dark:bg-gray-700">
 			<Container>
 				<div className="py-28 flex flex-col lg:flex-row items-center">
 					<h3 className="text-xl lg:text-xl  font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-						@ Dante Rohlin
+						@Dante Rohlin
 					</h3>
 					<div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
 						<a
@@ -16,11 +16,8 @@ export default function Footer() {
 						>
 							Github
 						</a>
-						<a
-							href={`https://github.com/officialskum/`}
-							className="mx-3 font-bold hover:underline"
-						>
-							View on GitHub
+						<a href="/contact" className="mx-3 font-bold hover:underline">
+							Contact me
 						</a>
 					</div>
 				</div>

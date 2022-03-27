@@ -1,17 +1,113 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-article a {
-    color: rgb(49, 49, 182);
-    text-decoration: underline;
-}
-/* purgecss end ignore */
 @tailwind utilities;
 
 /* :root {
     --social-color: rgb(97, 97, 97);
+}*/ 
+/* [data-theme='dark'] {
+    --dark-color: ;
+}  */
+
+/* TOGGLE THEME */
+.sun:after {
+  content: "Toggle light theme";
+  font-size: 12px;
+  opacity: 0;
+  white-space: nowrap;
+  padding: 5px;
+  position: absolute;
+  top: 26px; 
+  left: 15px;
+  transition: 0.3s ease;
+  pointer-events: none;
+  transform: translateX(-50%)
+} 
+
+.sun:hover:after {
+    opacity: 1;
 }
 
-[data-theme='dark'] {
-    --social-color: rgb(255, 255, 255);
-} */
+.moon:after {
+  content: "Toggle dark theme";
+  font-size: 12px;
+  opacity: 0; 
+  white-space: nowrap;
+  padding: 5px;
+  position: absolute;
+  top: 26px; 
+  left: 15px; 
+  transition: 0.3s ease; 
+  pointer-events: none; 
+  transform: translateX(-50%);
+}
+
+.moon:hover:after {
+    opacity: 1;
+}
+
+/* Game title */
+
+.game-title {
+    position: relative;
+    width: fit-content;
+}
+
+
+.game-title:hover:before {
+    content: " - Go to game's github";
+    white-space: nowrap;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.dark .game-title:after {
+    background-color: #1c1b22;
+}
+
+.game-title:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -240px;
+    width: 200px;
+    height: 50px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    pointer-events: none;
+}
+
+
+
+.game-title:hover:after {
+    animation: slideout 0.5s forwards;
+}
+
+/* POSTER HOVER */
+
+.poster p {
+    transition: all 0.2s ease;
+}
+
+.poster:hover p {
+    opacity: 0;
+}
+
+
+
+/* KEYFRAMES */
+
+@keyframes slideout {
+  from {
+    right: -240px;
+  }
+
+  to {
+    right: -400px;
+  }
+}

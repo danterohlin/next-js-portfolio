@@ -13,8 +13,10 @@ import GameTitle from "../../components/game-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 import Form from "../../components/form";
+import Posters from "../../components/posters";
 
 export default function Game({ game, moreGames, preview }) {
+	console.log(game);
 	const router = useRouter();
 	if (!router.isFallback && !game?.slug) {
 		return <ErrorPage statusCode={404} />;
@@ -33,11 +35,17 @@ export default function Game({ game, moreGames, preview }) {
 								</title>
 								{/* <meta property="og:image" content={game.ogImage.url} /> */}
 							</Head>
+
+							<Posters
+								posters={game.posters}
+								captions={game.captions}
+								link={game.link}
+							/>
 							<GameHeader
 								title={game.title}
-								coverImage={game.coverImage}
 								date={game.date}
 								author={game.author}
+								link={game.link}
 							/>
 							<GameBody content={game.body} />
 						</article>
@@ -67,10 +75,10 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export async function getStaticPaths() {
-	const allPosts = await getAllGamesWithSlug();
+	const allGames = await getAllGamesWithSlug();
 	return {
 		paths:
-			allPosts?.map((game) => ({
+			allGames?.map((game) => ({
 				params: {
 					slug: game.slug,
 				},

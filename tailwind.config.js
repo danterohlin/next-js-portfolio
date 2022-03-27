@@ -7,6 +7,17 @@ module.exports = {
 	theme: {
 		typography: (theme) => ({ dark: "dark" }),
 		extend: {
+			keyframes: {
+				wiggle: {
+					"0%, 100%": { transform: "rotate(-0.2deg)" },
+					"25%": { transform: "rotate(0.2deg)" },
+					"50%": { transform: "rotate(-0.2deg)" },
+					"75%": { transform: "rotate(0.2deg)" },
+				},
+			},
+			animation: {
+				wiggle: "wiggle 0.2s ease-in-out",
+			},
 			colors: {
 				"accent-1": "#FAFAFA",
 				"accent-2": "#EAEAEA",
