@@ -4,140 +4,142 @@
 
 /* :root {
     --social-color: rgb(97, 97, 97);
-}*/ 
+}*/
 /* [data-theme='dark'] {
     --dark-color: ;
 }*/
 
 * {
-    font-family: 'poppins';
+  font-family: "poppins";
 }
 
 /* NAVBAR */
 
-.dark .burger-menu--button, .dark .burger-menu--button:after, .dark .burger-menu--button:before {
-    background-color: #fff;
-} 
+.dark .burger-menu--button,
+.dark .burger-menu--button:after,
+.dark .burger-menu--button:before {
+  background-color: #fff;
+}
+
+.dark body {
+  background-color: #1c1b22;
+}
 
 .burger-menu--button {
-    display: flex;
-    width: 16px; 
-    height: 3px;
-    background-color: #000;
-    position: relative;
+  display: flex;
+  width: 16px;
+  height: 3px;
+  background-color: #000;
+  position: relative;
 }
 
 .burger-menu--button:after {
-    content: "";
-    background-color: #000;
-    position: absolute;
-    height: 3px;
-    width: 24px;
-    top: 8px;
-    right: 0px;
+  content: "";
+  background-color: #000;
+  position: absolute;
+  height: 3px;
+  width: 24px;
+  top: 8px;
+  right: 0px;
 }
 
 .burger-menu--button:before {
-    content: "";
-    background-color: #000;
-    position: absolute;
-    height: 3px;
-    width: 24px;
-    top: -8px;
-    right: 0px;
+  content: "";
+  background-color: #000;
+  position: absolute;
+  height: 3px;
+  width: 24px;
+  top: -8px;
+  right: 0px;
 }
 
 /* TOGGLE THEME */
 @media only screen and (min-width: 640px) {
-    .sun:after {
-        content: "Toggle light theme";
-        font-size: 12px;
-        opacity: 0;
-        white-space: nowrap;
-        padding: 5px;
-        position: absolute;
-        top: 26px; 
-        left: 15px;
-        transition: 0.3s ease;
-        pointer-events: none;
-        transform: translateX(-50%)
-    } 
+  .sun:after {
+    content: "Toggle light theme";
+    font-size: 12px;
+    opacity: 0;
+    white-space: nowrap;
+    padding: 5px;
+    position: absolute;
+    top: 26px;
+    left: 15px;
+    transition: 0.3s ease;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
 
-    .sun:hover:after {
-        opacity: 1;
-    }
+  .sun:hover:after {
+    opacity: 1;
+  }
 
-    .moon:after {
-        content: "Toggle dark theme";
-        font-size: 12px;
-        opacity: 0; 
-        white-space: nowrap;
-        padding: 5px;
-        position: absolute;
-        top: 26px; 
-        left: 15px; 
-        transition: 0.3s ease; 
-        pointer-events: none; 
-        transform: translateX(-50%);
-    }
+  .moon:after {
+    content: "Toggle dark theme";
+    font-size: 12px;
+    opacity: 0;
+    white-space: nowrap;
+    padding: 5px;
+    position: absolute;
+    top: 26px;
+    left: 15px;
+    transition: 0.3s ease;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
 
-    .moon:hover:after {
-        opacity: 1;
-    }
+  .moon:hover:after {
+    opacity: 1;
+  }
 }
 
 /* Game title */
 
 .game-title {
-    position: relative;
-    width: fit-content;
+  position: relative;
+  width: fit-content;
 }
 
-
 .game-title:hover:before {
-    content: " - Go to game's github";
-    white-space: nowrap;
-    font-size: 16px;
-    letter-spacing: 1px;
-    position: absolute;
-    top: 50%;
-    right: -210px;
-    transition: all 0.2s ease;
-    pointer-events: none;
+  content: " - Go to game's github";
+  white-space: nowrap;
+  font-size: 16px;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 50%;
+  right: -210px;
+  transition: all 0.2s ease;
+  pointer-events: none;
 }
 
 .dark .game-title:after {
-    background-color: #1c1b22;
+  background-color: #1c1b22;
 }
 
 .game-title:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -240px;
-    width: 200px;
-    height: 50px;
-    transform: translateY(-50%);
-    background-color: #fff;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -240px;
+  width: 200px;
+  height: 50px;
+  transform: translateY(-50%);
+  background-color: #fff;
+  pointer-events: none;
 }
 
 .game-title:hover:after {
-    animation: slideout 0.5s forwards;
+  animation: slideout 0.5s forwards;
 }
 
 /* POSTER HOVER */
 
 .poster p {
-    transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .poster:hover p {
-    opacity: 0;
+  opacity: 0;
 }
-
-
-
 
 /* KEYFRAMES */
 

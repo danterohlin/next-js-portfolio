@@ -109,7 +109,7 @@ export default function navbar() {
 							>
 								{" "}
 								<h4
-									className={`md:text-left p-4 bg-gray-700 border-b border-gray-600 bg-opacity-70 text-lg whitespace-nowrap ${
+									className={`md:text-left p-4 bg-gray-700 text-white border-b border-gray-600 bg-opacity-70 text-lg whitespace-nowrap ${
 										toggleMenu ? "bg-opacity-90" : "bg-opacity-0 border-b-0"
 									}`}
 									onClick={() => {
@@ -129,7 +129,7 @@ export default function navbar() {
 									`}
 							>
 								<h4
-									className={`md:text-left p-4 bg-gray-700 border-b border-gray-600 bg-opacity-70 w-screen text-lg whitespace-nowrap ${
+									className={`md:text-left p-4 bg-gray-700 text-white border-b border-gray-600 bg-opacity-70 w-screen text-lg whitespace-nowrap ${
 										toggleMenu ? "bg-opacity-90" : "bg-opacity-0 border-b-0"
 									}`}
 									onClick={() => {
@@ -149,7 +149,7 @@ export default function navbar() {
 									`}
 							>
 								<h4
-									className={`md:text-left p-4 bg-gray-700 border-b border-gray-600 bg-opacity-70 text-lg whitespace-nowrap ${
+									className={`md:text-left p-4 bg-gray-700 text-white border-b border-gray-600 bg-opacity-70 text-lg whitespace-nowrap ${
 										toggleMenu ? "bg-opacity-90" : "bg-opacity-0 border-b-0"
 									}`}
 									onClick={() => {
