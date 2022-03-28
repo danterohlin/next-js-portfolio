@@ -116,7 +116,7 @@ export default function navbar() {
 						<div
 							className={`sm:hidden pr-10 bg-opacity-90 absolute -bottom-16 right-2 `}
 						>
-							<ToggleTheme />
+							<ToggleTheme addText={true} />
 						</div>
 
 						<Link href="/about">

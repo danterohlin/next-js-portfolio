@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "next-themes";
 
-export default function darkmode() {
+export default function darkmode({ addText }) {
 	const { theme, setTheme } = useTheme();
 
 	return (
@@ -11,11 +11,11 @@ export default function darkmode() {
 		>
 			{theme === "dark" ? (
 				<p className={"sun relative"}>
-					<img width="34" src="/sun.png" />
+					{addText && "Lightmode"}<img width="34" src="/sun.png" />
 				</p>
 			) : (
 				<div className={"moon relative"}>
-					<img width="34" src="/moon.png" />
+					{addText && "Darkmode"}<img width="34" src="/moon.png" />
 				</div>
 			)}
 		</button>
