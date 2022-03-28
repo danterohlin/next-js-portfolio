@@ -101,7 +101,7 @@ export default function navbar() {
 							onClick={() => {
 								setToggleMenu(!toggleMenu);
 							}}
-							className="cursor-pointer p-4 h-10 flex justify-center items-center"
+							className="cursor-pointer h-10 flex justify-center items-center"
 						>
 							<button
 								className={`burger-menu--button ${toggleMenu && " toggled "}`}
@@ -109,12 +109,12 @@ export default function navbar() {
 						</div>
 					</div>
 					<nav
-						className={`flex absolute top-20 h-screen transition duration-300 left flex-col sm:hidden  ${
+						className={`flex absolute top-20 h-screen transition-all duration-300 left flex-col sm:hidden  ${
 							toggleMenu ? " left-0 " : " left-full "
 						}`}
 					>
 						<div
-							className={`sm:hidden pr-2 bg-opacity-90 absolute bottom-22 right-2 `}
+							className={`sm:hidden pr-2 bg-opacity-90 absolute bottom-28 right-2 `}
 						>
 							<ToggleTheme addText={true} />
 						</div>
