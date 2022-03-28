@@ -12,7 +12,7 @@ export default function GamePreview({
 	slug,
 }) {
 	return (
-		<div className="sm:mx-2 mx-auto p-2 flex flex-wrap relative">
+		<div className="sm:mx-2 mx-auto w-fit p-2 sm:p-0 flex flex-wrap relative">
 			<div className="mb-5">
 				<CoverImage
 					slug={slug}
@@ -21,7 +21,7 @@ export default function GamePreview({
 					url={imageBuilder(coverImage).url()}
 				/>
 			</div>
-			<p className="text-sm sm:text-md xl:text-md whitespace-nowrap mb-3 leading-snug absolute -left-2 text-white bottom-14 bg-opacity-90 rounded-r bg-gray-800 p-2">
+			<p className="text-sm sm:text-md xl:text-md whitespace-nowrap leading-snug absolute text-white bottom-20 right-1 left-1 sm:-right-1 sm:-left-1  bg-green-500 p-2">
 				<Link as={`/posts/${slug}`} href="/posts/[slug]">
 					<a className="hover:underline">{title}</a>
 				</Link>

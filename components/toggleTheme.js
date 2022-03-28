@@ -15,7 +15,7 @@ export default function darkmode() {
 				</p>
 			) : (
 				<div className={"moon relative"}>
-					<img width="30" src="/moon.png" />
+					<img width="40" src="/moon.png" />
 				</div>
 			)}
 		</button>

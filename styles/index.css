@@ -14,17 +14,22 @@
 }
 
 /* NAVBAR */
+
+.dark .burger-menu--button, .dark .burger-menu--button:after, .dark .burger-menu--button:before {
+    background-color: #fff;
+} 
+
 .burger-menu--button {
     display: flex;
     width: 16px; 
     height: 3px;
-    background-color: #fff;
+    background-color: #000;
     position: relative;
 }
 
 .burger-menu--button:after {
     content: "";
-    background-color: #fff;
+    background-color: #000;
     position: absolute;
     height: 3px;
     width: 24px;
@@ -34,7 +39,7 @@
 
 .burger-menu--button:before {
     content: "";
-    background-color: #fff;
+    background-color: #000;
     position: absolute;
     height: 3px;
     width: 24px;

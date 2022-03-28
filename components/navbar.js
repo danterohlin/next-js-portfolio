@@ -25,7 +25,9 @@ export default function navbar() {
 	return (
 		<>
 			<navbar
-				className={`fixed w-full flex h-20 items-center border-b dark:border-gray-700 justify-center z-20 transition ease-in-out duration-800 ${
+				className={`fixed w-full flex h-20 items-center border-b dark:border-gray-800 justify-center z-20 transition ease-in-out duration-800 ${
+					toggleMenu && "border-b-0"
+				} ${
 					scrollY > 50 && !toggleMenu
 						? "bg-opacity-40 h-14 dark:bg-opacity-40 bg-white dark:bg-black"
 						: "bg-opacity-100"
@@ -37,13 +39,13 @@ export default function navbar() {
 							{scrollY > 50 ? (
 								<a></a>
 							) : (
-								<a className="hover:underline bg-purple-100 whitespace-nowrap hidden sm:inline dark:text-black px-2 xs:bg-transparent">
+								<a className="hover:underline whitespace-nowrap hidden sm:inline dark:text-white px-2 xs:bg-transparent">
 									Andreas Portfolio
 								</a>
 							)}
 						</Link>
 					</h1>
-					<nav className="flex flex-row justify-between sm:justify-end w-full hidden sm:flex">
+					<nav className="flex flex-row justify-between items-center sm:justify-end w-full hidden sm:flex">
 						{/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
 						<Link href="/projects">
 							<a className="hover:underline">Projects</a>
@@ -163,7 +165,7 @@ export default function navbar() {
 			</navbar>
 			{toggleMenu && (
 				<div
-					className="fixed w-full sm:hidden h-full bg-black opacity-80 z-10"
+					className="fixed w-full sm:hidden h-full bg-black opacity-90 z-10"
 					onClick={() => {
 						setToggleMenu(!toggleMenu);
 					}}
