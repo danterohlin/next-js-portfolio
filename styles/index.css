@@ -58,7 +58,7 @@
 
 .burger-menu--button:after {
   content: "";
-  background-color: #000;
+  background-color: #000; 
   position: absolute;
   height: 3px;
   width: 24px;
