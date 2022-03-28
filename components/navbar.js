@@ -25,7 +25,7 @@ export default function navbar() {
 	return (
 		<>
 			<navbar
-				className={`fixed w-full flex h-20 items-center border-b dark:border-gray-800 justify-center z-20 transition ease-in-out duration-800 ${
+				className={`fixed w-full flex h-20 items-center dark:border-gray-800 justify-center z-20 transition ease-in-out duration-800 ${
 					toggleMenu && "border-b-0 sm:border-b"
 				} ${
 					scrollY > 50 && !toggleMenu
@@ -169,7 +169,7 @@ export default function navbar() {
 					}}
 				></div>
 			)}
-			<div className="p-12"></div>
+			<div className="p-10"></div>
 		</>
 	);
 }

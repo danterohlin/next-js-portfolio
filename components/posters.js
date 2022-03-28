@@ -4,22 +4,28 @@ import { useState } from "react";
 export default function Posters({ posters = [], link }) {
 	const [toggle, setToggle] = useState(false);
 
+	console.log(posters.length);
 	return (
 		<>
 			<div className="hidden sm:block">
-				<p
-					className={`p-2 mx-2 cursor-pointer`}
-					onClick={() => {
-						setToggle(!toggle);
-					}}
-				>
-					{toggle ? "Show Gallery" : "Hide Gallery"}
-				</p>
+				{!posters.length == 0 ? (
+					<p
+						className={`p-2 mx-2 cursor-pointer`}
+						onClick={() => {
+							setToggle(!toggle);
+						}}
+					>
+						{toggle ? "Show Gallery" : "Hide Gallery"}
+					</p>
+				) : (
+					<p className={`p-2 mx-2 pointer-events-none `}>No images</p>
+				)}
+
 				{!toggle ? (
 					<div className="grid grid-cols-2 p-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 row-gap-20 md:row-gap-32 mb-20">
 						{posters?.map(({ poster, caption, i }) => (
 							<div
-								key={i}
+								key={caption}
 								className="poster mx-2 relative m-2 w-fit sm:w-fit flex opacity-90 drop-shadow-xl hover:opacity-100 items-center justify-center"
 							>
 								<img
@@ -39,7 +45,7 @@ export default function Posters({ posters = [], link }) {
 					<div className="flex flex-wrap justify-center mb-4">
 						{posters?.map(({ poster, caption, i }) => (
 							<div
-								key={i}
+								key={caption}
 								className="poster mx-2 relative m-2 w-fit sm:w-fit flex opacity-90 drop-shadow-xl hover:opacity-100 items-center justify-center"
 							>
 								<img
@@ -68,7 +74,7 @@ export default function Posters({ posters = [], link }) {
 					<div className="grid grid-cols-2 p-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 row-gap-20 md:row-gap-32 mb-32">
 						{posters?.map(({ poster, caption, i }) => (
 							<div
-								key={i}
+								key={caption}
 								className="poster mx-2 relative m-2 w-fit sm:w-fit flex opacity-90 drop-shadow-xl hover:opacity-100 items-center justify-center"
 							>
 								<img

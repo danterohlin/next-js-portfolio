@@ -9,7 +9,7 @@ export default function PostBody({ content, date }) {
 				<Date dateString={date} />
 			</div>
 			<div className="body-text">
-				<PortableText value={content} />
+				{content && <PortableText value={content} />}
 			</div>
 		</div>
 	);
