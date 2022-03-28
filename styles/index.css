@@ -5,9 +5,9 @@
 /* :root {
     --social-color: rgb(97, 97, 97);
 }*/ 
-/* [data-theme='dark'] {
-    --dark-color: ;
-}*/
+[data-theme='dark'] {
+    --color: #fff;
+}
 
 * {
     font-family: 'poppins';
