@@ -169,7 +169,7 @@ export default function navbar() {
 					}}
 				></div>
 			)}
-			<div className="p-12"></div>
+			<div className="p-10"></div>
 		</>
 	);
 }
