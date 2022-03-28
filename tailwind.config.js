@@ -18,10 +18,8 @@ module.exports = {
 					"100%": { transform: "translateX(-100%)" },
 				},
 				wiggle: {
-					"0%, 100%": { transform: "rotate(-0.2deg)" },
-					"25%": { transform: "rotate(0.2deg)" },
-					"50%": { transform: "rotate(-0.2deg)" },
-					"75%": { transform: "rotate(0.2deg)" },
+					"0%, 50%, 100%": { transform: "rotate(-0.3deg)" },
+					"25%, 75%": { transform: "rotate(0.3deg)" },
 				},
 			},
 			animation: {
