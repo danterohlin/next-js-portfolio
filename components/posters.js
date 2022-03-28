@@ -7,14 +7,18 @@ export default function Posters({ posters = [], link }) {
 	return (
 		<>
 			<div className="hidden sm:block">
-				<p
-					className={`p-2 mx-2 cursor-pointer`}
-					onClick={() => {
-						setToggle(!toggle);
-					}}
-				>
-					{toggle ? "Show Gallery" : "Hide Gallery"}
-				</p>
+				{!posters.length == 0 ? (
+					<p
+						className={`p-2 mx-2 cursor-pointer`}
+						onClick={() => {
+							setToggle(!toggle);
+						}}
+					>
+						{toggle ? "Show Gallery" : "Hide Gallery"}
+					</p>
+				) : (
+					<p className={`p-2 mx-2 pointer-events-none `}>No images</p>
+				)}
 				{!toggle ? (
 					<div className="grid grid-cols-2 p-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 row-gap-20 md:row-gap-32 mb-20">
 						{posters?.map(({ poster, caption, i }) => (
