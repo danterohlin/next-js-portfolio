@@ -11,11 +11,11 @@ export default function darkmode({ addText }) {
 		>
 			{theme === "dark" ? (
 				<p className={"sun flex relative"}>
-					{addText && "Lightmode "}<img width="34" src="/sun.png" />
+					{addText && <p className="pr-1">Lightmode</p>}<img width="34" src="/sun.png" />
 				</p>
 			) : (
 				<div className={"moon text-white flex relative"}>
-					{addText && "Darkmode "}<img width="34" src="/moon.png" />
+					{addText && <p className="pr-1">Darkmode</p>}<img width="34" src="/moon.png" />
 				</div>
 			)}
 		</button>

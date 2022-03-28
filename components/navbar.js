@@ -109,12 +109,12 @@ export default function navbar() {
 						</div>
 					</div>
 					<nav
-						className={`flex absolute top-20 transition duration-300 left flex-col sm:hidden  ${
+						className={`flex absolute top-20 h-screen transition duration-300 left flex-col sm:hidden  ${
 							toggleMenu ? " left-0 " : " left-full "
 						}`}
 					>
 						<div
-							className={`sm:hidden pr-10 bg-opacity-90 absolute -bottom-16 right-2 `}
+							className={`sm:hidden pr-2 bg-opacity-90 absolute bottom-22 right-2 `}
 						>
 							<ToggleTheme addText={true} />
 						</div>
