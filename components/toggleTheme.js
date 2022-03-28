@@ -10,12 +10,12 @@ export default function darkmode({ addText }) {
 			onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 		>
 			{theme === "dark" ? (
-				<p className={"sun relative"}>
-					{addText && "Lightmode"}<img width="34" src="/sun.png" />
+				<p className={"sun flex relative"}>
+					{addText && "Lightmode "}<img width="34" src="/sun.png" />
 				</p>
 			) : (
-				<div className={"moon relative"}>
-					{addText && "Darkmode"}<img width="34" src="/moon.png" />
+				<div className={"moon text-white flex relative"}>
+					{addText && "Darkmode "}<img width="34" src="/moon.png" />
 				</div>
 			)}
 		</button>
