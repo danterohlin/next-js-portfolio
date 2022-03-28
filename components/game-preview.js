@@ -22,7 +22,7 @@ export default function GamePreview({
 				/>
 			</div>
 			<p className="text-sm sm:text-md xl:text-md whitespace-nowrap leading-snug absolute text-white bottom-20 right-1 left-1 sm:-right-1 sm:-left-1  bg-purple-500 bg-opacity-80 p-2">
-				<Link as={`/posts/${slug}`} href="/posts/[slug]">
+				<Link as={`/games/${slug}`} href="/games/[slug]">
 					<a className="hover:underline">{title}</a>
 				</Link>
 			</p>
