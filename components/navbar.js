@@ -26,7 +26,7 @@ export default function navbar() {
 		<>
 			<navbar
 				className={`fixed w-full flex h-20 items-center border-b dark:border-gray-800 justify-center z-20 transition ease-in-out duration-800 ${
-					toggleMenu && "border-b-0"
+					toggleMenu && "border-b-0 sm:border-b"
 				} ${
 					scrollY > 50 && !toggleMenu
 						? "bg-opacity-40 h-14 dark:bg-opacity-40 bg-white dark:bg-black"
@@ -79,58 +79,56 @@ export default function navbar() {
 						<div className="hidden sm:block">{scrollY < 50 && <ToggleTheme />}</div>
 					</nav>
 					<div className="w-full flex justify-between items-center z-30 sm:hidden">
-						<div
-							className={`sm:hidden pt-2 ${
-								toggleMenu ? "bg-opacity-90" : "bg-opacity-0"
-							}`}
-						>
-							<ToggleTheme />
-						</div>
-						<div
-							onClick={() => {
-								setToggleMenu(!toggleMenu);
-							}}
-							className="cursor-pointer p-4 h-10 flex justify-center items-center"
-						>
-							<button className="burger-menu--button "></button>
-						</div>
-					</div>
-					<nav
-						className={`flex absolute top-20 left-0 flex-col sm:hidden  ${
-							toggleMenu ? "animate-slidein" : "animate-slideout"
-						}`}
-					>
 						<Link href="/">
 							<a
-								className={`hover:bg-gray-800 ${
-									router.pathname == "/" ? "text-green-200" : ""
-								}
+								className={` ${router.pathname == "/" ? "text-black" : ""}
 									`}
 							>
 								{" "}
 								<h4
-									className={`md:text-left p-4 bg-gray-700 border-b border-gray-600 bg-opacity-70 text-lg whitespace-nowrap ${
-										toggleMenu ? "bg-opacity-90" : "bg-opacity-0 border-b-0"
+									className={`md:text-left dark:text-white border-gray-600 bg-opacity-70 text-lg whitespace-nowrap ${
+										toggleMenu ? "bg-opacity-90 text-white " : "bg-opacity-0 border-b-0"
 									}`}
 									onClick={() => {
-										setToggleMenu(!toggleMenu);
+										toggleMenu && setToggleMenu(!toggleMenu);
 									}}
 								>
 									Home
 								</h4>
 							</a>
 						</Link>
+						<div
+							onClick={() => {
+								setToggleMenu(!toggleMenu);
+							}}
+							className="cursor-pointer p-4 h-10 flex justify-center items-center"
+						>
+							<button
+								className={`burger-menu--button ${toggleMenu && " toggled "}`}
+							></button>
+						</div>
+					</div>
+					<nav
+						className={`flex absolute top-20 transition duration-300 left flex-col sm:hidden  ${
+							toggleMenu ? " left-0 " : " left-full "
+						}`}
+					>
+						<div
+							className={`sm:hidden pr-10 bg-opacity-90 absolute -bottom-16 right-2 `}
+						>
+							<ToggleTheme />
+						</div>
 
 						<Link href="/about">
 							<a
-								className={`hover:bg-gray-800 ${
-									router.pathname == "/about" ? "text-green-200" : ""
+								className={` ${
+									router.pathname == "/about" ? "bg-gray-800 bg-opacity-50" : ""
 								}
 									`}
 							>
 								<h4
-									className={`md:text-left p-4 bg-gray-700 border-b border-gray-600 bg-opacity-70 w-screen text-lg whitespace-nowrap ${
-										toggleMenu ? "bg-opacity-90" : "bg-opacity-0 border-b-0"
+									className={`md:text-left p-4 bg-black text-white border-b border-t border-gray-800 w-screen text-lg whitespace-nowrap ${
+										toggleMenu ? "bg-opacity-0" : "bg-opacity-0 border-b-0"
 									}`}
 									onClick={() => {
 										setToggleMenu(!toggleMenu);
@@ -143,14 +141,14 @@ export default function navbar() {
 
 						<Link href="/contact">
 							<a
-								className={`hover:bg-gray-800 ${
-									router.pathname == "/contact" ? "text-green-200" : ""
+								className={` ${
+									router.pathname == "/contact" ? "bg-gray-800 bg-opacity-50" : ""
 								}
 									`}
 							>
 								<h4
-									className={`md:text-left p-4 bg-gray-700 border-b border-gray-600 bg-opacity-70 text-lg whitespace-nowrap ${
-										toggleMenu ? "bg-opacity-90" : "bg-opacity-0 border-b-0"
+									className={`md:text-left p-4 bg-black text-white border-b border-gray-800 bg-opacity-70 text-lg whitespace-nowrap ${
+										toggleMenu ? "bg-opacity-0" : "bg-opacity-0 border-b-0"
 									}`}
 									onClick={() => {
 										setToggleMenu(!toggleMenu);

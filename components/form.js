@@ -53,7 +53,7 @@ export default function Form({ _id }) {
 	}
 
 	return (
-		<div className="p-2 xs:p-0">
+		<div>
 			{/* <form action="mailto:dante.rohlin@gmail.com" method="GET">
 				<input name="subject" type="text" />
 				<textarea name="body"></textarea>

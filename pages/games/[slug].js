@@ -34,23 +34,20 @@ export default function Game({ game, moreGames, preview }) {
 								</title>
 								{/* <meta property="og:image" content={game.ogImage.url} /> */}
 							</Head>
-
+							<GameHeader title={game.title} date={game.date} link={game.link} />
 							<Posters
 								posters={game.posters}
 								captions={game.captions}
 								link={game.link}
 							/>
-							<GameHeader
-								title={game.title}
-								date={game.date}
-								author={game.author}
-								link={game.link}
-							/>
-							<GameBody content={game.body} />
+
+							<GameBody content={game.body} date={game.date} />
 						</article>
 
 						<Comments comments={game.comments} />
-						<Form _id={game._id} />
+						<div className="p-4 sm:p-0">
+							<Form _id={game._id} />
+						</div>
 
 						<SectionSeparator />
 						{moreGames.length > 0 && <MoreProjects games={moreGames} />}

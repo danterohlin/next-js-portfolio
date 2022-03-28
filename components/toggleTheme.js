@@ -11,11 +11,11 @@ export default function darkmode() {
 		>
 			{theme === "dark" ? (
 				<p className={"sun relative"}>
-					<img width="30" src="/sun.png" />
+					<img width="34" src="/sun.png" />
 				</p>
 			) : (
 				<div className={"moon relative"}>
-					<img width="40" src="/moon.png" />
+					<img width="34" src="/moon.png" />
 				</div>
 			)}
 		</button>
