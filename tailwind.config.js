@@ -8,6 +8,15 @@ module.exports = {
 		typography: (theme) => ({ dark: "dark" }),
 		extend: {
 			keyframes: {
+				slidei: {
+					"0%": { transform: "translateX(-100%)" },
+					"85%": { transform: "translateX(20%)" },
+					"100%": { transform: "translateX(0%)" },
+				},
+				slideo: {
+					"0%": { transform: "translateX(0%)" },
+					"100%": { transform: "translateX(-100%)" },
+				},
 				wiggle: {
 					"0%, 100%": { transform: "rotate(-0.2deg)" },
 					"25%": { transform: "rotate(0.2deg)" },
@@ -16,6 +25,8 @@ module.exports = {
 				},
 			},
 			animation: {
+				slideout: "slideo 0.2s ease-out forwards",
+				slidein: "slidei 0.3s ease-out forwards",
 				wiggle: "wiggle 0.2s ease-in-out",
 			},
 			colors: {

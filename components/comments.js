@@ -1,7 +1,6 @@
 import Date from "./date";
 
 export default function Comments({ comments = [] }) {
-	console.log(comments);
 	return (
 		<div className="p-2">
 			<h2 className="mt-10 mb-4 text-4xl lg:text-6xl leading-tight">Comment:</h2>

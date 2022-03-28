@@ -6,7 +6,7 @@ export default function MoreProjects({ games }) {
 			<h2 className="text-center sm:text-left pt-4 mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
 				More Projects
 			</h2>
-			<div className="grid grid-cols-1 md:grid-cols-4 row-gap-20 md:row-gap-32 mb-32">
+			<div className="grid grid-cols-2 p-2 gap-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 row-gap-20 md:row-gap-32 mb-32">
 				{games.map((post) => (
 					<GamePreview
 						key={post.slug}

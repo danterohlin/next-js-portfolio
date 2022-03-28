@@ -16,7 +16,6 @@ import Form from "../../components/form";
 import Posters from "../../components/posters";
 
 export default function Game({ game, moreGames, preview }) {
-	console.log(game);
 	const router = useRouter();
 	if (!router.isFallback && !game?.slug) {
 		return <ErrorPage statusCode={404} />;

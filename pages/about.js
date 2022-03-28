@@ -3,7 +3,6 @@ import { getAuthors } from "../lib/api";
 import Image from "next/image";
 
 export default function about({ authors }) {
-	console.log(authors[0]);
 	return (
 		<div className="p-2 xs:p-0 pt-10">
 			<Container>I'm just a noob</Container>

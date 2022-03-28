@@ -13,41 +13,72 @@
     font-family: 'poppins';
 }
 
+/* NAVBAR */
+.burger-menu--button {
+    display: flex;
+    width: 16px; 
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+}
+
+.burger-menu--button:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    height: 3px;
+    width: 24px;
+    top: 8px;
+    right: 0px;
+}
+
+.burger-menu--button:before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    height: 3px;
+    width: 24px;
+    top: -8px;
+    right: 0px;
+}
+
 /* TOGGLE THEME */
-.sun:after {
-  content: "Toggle light theme";
-  font-size: 12px;
-  opacity: 0;
-  white-space: nowrap;
-  padding: 5px;
-  position: absolute;
-  top: 26px; 
-  left: 15px;
-  transition: 0.3s ease;
-  pointer-events: none;
-  transform: translateX(-50%)
-} 
+@media only screen and (min-width: 640px) {
+    .sun:after {
+        content: "Toggle light theme";
+        font-size: 12px;
+        opacity: 0;
+        white-space: nowrap;
+        padding: 5px;
+        position: absolute;
+        top: 26px; 
+        left: 15px;
+        transition: 0.3s ease;
+        pointer-events: none;
+        transform: translateX(-50%)
+    } 
 
-.sun:hover:after {
-    opacity: 1;
-}
+    .sun:hover:after {
+        opacity: 1;
+    }
 
-.moon:after {
-  content: "Toggle dark theme";
-  font-size: 12px;
-  opacity: 0; 
-  white-space: nowrap;
-  padding: 5px;
-  position: absolute;
-  top: 26px; 
-  left: 15px; 
-  transition: 0.3s ease; 
-  pointer-events: none; 
-  transform: translateX(-50%);
-}
+    .moon:after {
+        content: "Toggle dark theme";
+        font-size: 12px;
+        opacity: 0; 
+        white-space: nowrap;
+        padding: 5px;
+        position: absolute;
+        top: 26px; 
+        left: 15px; 
+        transition: 0.3s ease; 
+        pointer-events: none; 
+        transform: translateX(-50%);
+    }
 
-.moon:hover:after {
-    opacity: 1;
+    .moon:hover:after {
+        opacity: 1;
+    }
 }
 
 /* Game title */
@@ -86,8 +117,6 @@
     pointer-events: none;
 }
 
-
-
 .game-title:hover:after {
     animation: slideout 0.5s forwards;
 }
@@ -104,6 +133,7 @@
 
 
 
+
 /* KEYFRAMES */
 
 @keyframes slideout {
@@ -113,5 +143,15 @@
 
   to {
     right: -440px;
+  }
+}
+
+@keyframes slidein {
+  from {
+    left: -240px;
+  }
+
+  to {
+    left: 0px;
   }
 }
