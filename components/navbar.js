@@ -115,7 +115,7 @@ export default function navbar() {
 					>
 						<div
 							className={`sm:hidden pr-2 bg-opacity-90 absolute ${
-								scrollY > 50 ? "bottom-36" : "bottom-44"
+								scrollY > 50 ? "bottom-28" : "bottom-52"
 							} right-4 `}
 						>
 							<ToggleTheme addText={true} />
