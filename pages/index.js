@@ -19,7 +19,7 @@ export default function Index({ allGames, allPosts, preview }) {
 		<>
 			<Layout preview={preview}>
 				<Head>
-					<title>Next.js Blog Example with {CMS_NAME}</title>
+					<title>Andreas Portfolio</title>
 				</Head>
 				<Container>
 					<Intro games={allGames} />
