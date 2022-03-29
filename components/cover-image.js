@@ -11,7 +11,7 @@ export default function CoverImage({ title, url, imageObject, slug }) {
 			alt={`Cover Image for ${title}`}
 			className={
 				cn("shadow-small", {
-					"hover:shadow-medium transition-shadow duration-200 rounded-2xl border-2 border-black ":
+					"hover:shadow-medium drop-shadow-2xl transition-shadow drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] dark:drop-shadow-[0_35px_35px_rgba(123,123,123,0.1)] dark:hover:drop-shadow-[0_35px_35px_rgba(123,123,123,0.12)] duration-200 rounded-2xl border-2 border-black ":
 						slug,
 				}) + styles.card_zoom_image
 			}
