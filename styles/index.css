@@ -108,6 +108,7 @@
     transition: 0.3s ease;
     pointer-events: none;
     transform: translateX(-50%);
+    color: #000;
   }
 
   .moon:hover:after {
