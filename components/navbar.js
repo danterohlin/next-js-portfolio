@@ -55,7 +55,7 @@ export default function navbar() {
 							<Link href="/about">
 								<a
 									className={`hover:underline + ${
-										router.pathname == "/about" ? "underline" : ""
+										router.pathname == "/about" && "underline"
 									}
 									`}
 								>
@@ -68,7 +68,7 @@ export default function navbar() {
 							<Link href="/contact">
 								<a
 									className={`hover:underline + ${
-										router.pathname == "/contact" ? "underline" : ""
+										router.pathname == "/contact" && "underline"
 									}
 									`}
 								>
@@ -81,7 +81,7 @@ export default function navbar() {
 					<div className="w-full flex justify-between items-center z-30 sm:hidden">
 						<Link href="/">
 							<a
-								className={` ${router.pathname == "/" ? "text-black" : ""}
+								className={` ${router.pathname == "/" && "text-black"}
 									`}
 							>
 								{" "}
