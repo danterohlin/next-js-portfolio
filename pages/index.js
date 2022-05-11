@@ -2,15 +2,12 @@ import Container from "../components/container";
 import MoreProjects from "../components/more-projects";
 import GameHero from "../components/hero-game";
 import Layout from "../components/layout";
-import { getAllPostsForHome } from "../lib/api";
 import { getAllGamesForHome } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Intro from "../components/intro";
 
-export default function Index({ allGames, allPosts, preview }) {
-	const heroPost = allPosts[0];
-	const morePosts = allPosts.slice(1);
+export default function Index({ allGames, preview }) {
 	const heroGame = allGames[0];
 	const moreGames = allGames.slice(1);
 
@@ -40,10 +37,9 @@ export default function Index({ allGames, allPosts, preview }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-	const allPosts = await getAllPostsForHome(preview);
 	const allGames = await getAllGamesForHome(preview);
 	return {
-		props: { allGames, allPosts, preview },
+		props: { allGames, preview },
 		revalidate: 1,
 	};
 }
