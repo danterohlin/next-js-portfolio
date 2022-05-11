@@ -1,5 +1,4 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
 import MoreProjects from "../components/more-projects";
 import GameHero from "../components/hero-game";
 import Layout from "../components/layout";

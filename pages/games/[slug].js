@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "../../components/container";
 import GameBody from "../../components/game-body";
-import MoreStories from "../../components/more-stories";
 import MoreProjects from "../../components/more-projects";
 import GameHeader from "../../components/game-header";
 import Comments from "../../components/comments";
